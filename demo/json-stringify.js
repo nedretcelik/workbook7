@@ -2,8 +2,13 @@
 
 let job = {
   title: "Web Designer",
-  startDate: "October 2022",
+  startDate: new Date(),
   company: "AT&T",
   minSalary: 52000,
   maxSalary: 86000,
 };
+
+
+let jobAsString = JSON.stringify(job);
+
+console.log(jobAsString)
