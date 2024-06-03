@@ -9,4 +9,4 @@ let jobAsString = `{"title" : "Web Designer",
 
 let job = JSON.parse(jobAsString);
 
-console.log(jobAsString)
+console.log(job)
