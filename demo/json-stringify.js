@@ -9,6 +9,6 @@ let job = {
 };
 
 
-let jobAsString = JSON.stringify(job);
+let jobAsString = JSON.stringify(job, null, " ");
 
 console.log(jobAsString)
