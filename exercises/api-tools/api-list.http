@@ -1,0 +1,37 @@
+### EMOJI
+GET  https://emojihub.yurace.pro/api/random
+
+
+### DOG
+
+GET https://dog.ceo/api/breeds/image/random
+
+
+### CATS
+
+GET https://http.cat/401
+
+###
+GET https://api.artic.edu/api/v1/artworks/search?q=cats
+
+###
+GET https://placebear.com/500/600
+
+###
+
+GET https://robohash.org/onerobot.png
+
+###
+GET https://finalspaceapi.com/api/v0/episode/1
+
+### IS EVEN
+GET https://api.isevenapi.xyz/api/iseven/12/
+
+### 
+GET https://api.fbi.gov/wanted/v1/list
+
+
+
+
+
+

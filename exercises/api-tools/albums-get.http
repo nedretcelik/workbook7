@@ -1,0 +1,9 @@
+
+### GET ALBUMS
+GET https://jsonplaceholder.typicode.com/albums/3
+
+### GET TODOS
+GET https://jsonplaceholder.typicode.com/todos/1
+
+### GET COMMENTS
+GET https://jsonplaceholder.typicode.com/comments
