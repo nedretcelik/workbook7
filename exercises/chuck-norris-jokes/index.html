@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chuck Norris Jokes</title>
+    <!-- Centered viewport -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
+    />
+  </head>
+  <body>
+    <main>
+      <label for="categoriesDropdown">Category</label>
+      <select id="categoriesDropdown">
+        <option value="">Select...</option>
+      </select>
+      <article>
+        <blockquote id="jokeBlockquote"></blockquote>
+        <mark
+          >Warning: some of the jokes provided by the API contain explicit
+          content.</mark
+        >
+      </article>
+    </main>
+    <script>
+      const categoriesDropdown = document.querySelector("#categoriesDropdown");
+      const jokeBlockquote = document.querySelector("#jokeBlockquote");
+
+      function loadCategoriesDropdown() {
+        fetch("https://api.chucknorris.io/jokes/categories")
+          .then((response) => response.json())
+          .then((categories) => categories.filter((c) => c != "explicit"))
+          .then((filteredCategories) => {
+            for (const category of filteredCategories) {
+              let option = new Option(category, category);
+              categoriesDropdown.appendChild(option);
+            }
+          });
+      }
+
+      function loadJoke() {
+        const category = categoriesDropdown.value;
+        fetch(`https://api.chucknorris.io/jokes/random?category=${category}`)
+          .then((response) => response.json())
+          .then((joke) => (jokeBlockquote.innerText = joke.value));
+      }
+
+      categoriesDropdown.addEventListener("change", loadJoke);
+
+      loadCategoriesDropdown();
+    </script>
+  </body>
+</html>
